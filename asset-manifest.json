@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/reactOnlineTeaching/static/css/main.0910345e.css",
+    "main.js": "/reactOnlineTeaching/static/js/main.fc96d9f9.js",
+    "static/media/back.webp": "/reactOnlineTeaching/static/media/back.78df681d64f8d2c70c5a.webp",
+    "static/media/awrapper.webp": "/reactOnlineTeaching/static/media/awrapper.031ce77a398171427673.webp",
+    "static/media/b2.webp": "/reactOnlineTeaching/static/media/b2.70157d5c97cdb1ed20bf.webp",
+    "index.html": "/reactOnlineTeaching/index.html",
+    "main.0910345e.css.map": "/reactOnlineTeaching/static/css/main.0910345e.css.map",
+    "main.fc96d9f9.js.map": "/reactOnlineTeaching/static/js/main.fc96d9f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0910345e.css",
+    "static/js/main.fc96d9f9.js"
+  ]
+}
