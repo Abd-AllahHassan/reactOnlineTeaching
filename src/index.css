@@ -1,13 +1,363 @@
+/* Global Styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Typography */
+h1, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.8125rem;
+  margin: 1.25rem 0;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.0625rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #03002b;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.875rem;
+  font-size: 1.125rem;
+  color: #09002c;
+}
+
+/* Button Styles */
+button {
+  padding: 1.0625rem 1.875rem;
+  background-color: #040029;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+  box-shadow: 0 1.5rem 2.25rem -0.6875rem rgba(45, 39, 46, 0.09);
+  transition: 0.5s;
+}
+
+button i {
+  margin-left: 1.25rem;
+}
+
+button:hover {
+  box-shadow: none;
+  background-color: #1e1576;
+  transform: scale(1.1);
+}
+
+.primary-btn {
+  background-color: #b7b7b8;
+  color: #0c073e;
+}
+
+.primary-btn:hover {
+  background-color: #0c073e;
+  color: #fff;
+}
+
+.outline-btn {
+  border: 0.125rem solid #d0cfdb;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.outline-btn:hover {
+  background-color: #230b5c;
+  color: #fff;
+}
+
+/* Awrapper Section */
+.awrapper {
+  background: url("../public/images/awrapper.webp") center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.125rem 0.625rem;
+  color: #fff;
+}
+
+.awrapper .box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.awrapper .img {
+  margin-right: -0.875rem;
+}
+
+.awrapper .img img {
+  width: 4.375rem;
+}
+
+.awrapper h1 {
+  font-size: 3rem;
+  margin: 0.625rem 0;
+}
+
+.awrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Grid Layouts */
+.grid, .grid2, .grid3 {
+  display: grid;
+  grid-gap: 1.875rem;
+}
+
+/* Default for larger screens */
+.grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid3 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Responsive Design for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive Design for small screens (mobile) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .grid, .grid2, .grid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flex and Utility Classes */
+.flexSB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures items don't overflow */
+}
+
+/* For Tablets and Smaller Devices (up to 768px wide) */
+@media (max-width: 768px) {
+  .flexSB {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the items in the column */
+  }
+}
+
+/* For Mobile Devices (up to 480px wide) */
+@media (max-width: 480px) {
+  .flexSB {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Adjust if you want left alignment */
+    gap: 10px; /* Add some spacing between items */
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  width: 50%;
+}
+
+.padding {
+  padding: 5rem 0;
+}
+
+.shadow {
+  box-shadow: 0 0.3125rem 1.5625rem -0.125rem rgb(0 0 0 / 6%);
+  background-color: #fff;
+}
+
+/* Background Image Section */
+.back {
+  background: url("../public/images/back.webp") center/cover no-repeat fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5a5064;
+  text-align: center;
+  padding: 0 15px; /* Add padding for mobile spacing */
+}
+
+.back h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.back h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #04001b;
+}
+
+.Hmargin {
+  margin-top: 10%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .back h1 {
+    font-size: 3rem;
+  }
+
+  .back h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .back h1 {
+    font-size: 2.5rem;
+  }
+
+  .back h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back h1 {
+    font-size: 2rem;
+  }
+
+  .back h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Heading Style */
+#heading {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+#heading h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #190650;
+  text-transform: uppercase;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .awrapper {
+    height: 60vh;
+  }
+
+  .awrapper h1 {
+    font-size: 2.5rem;
+  }
+
+  .awrapper h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .awrapper {
+    height: 120vh;
+    margin: 90px;
+  }
+
+  .awrapper .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .awrapper h1 {
+    font-size: 2rem;
+  }
+
+  .grid, .grid2, .grid3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .back {
+    padding-top: 50%;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .awrapper {
+    height: 130vh;
+    padding: 1.875rem 0.625rem;
+  }
+
+  .awrapper h1 {
+    font-size: 1.8rem;
+  }
+
+  .awrapper h3 {
+    font-size: 0.9rem;
+  }
+
+  .awrapper .img img {
+    width: 3.125rem;
+  }
+}
+
+.margin {
+  margin-top: 44%;
 }

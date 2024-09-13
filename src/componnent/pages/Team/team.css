@@ -1,0 +1,78 @@
+/* Team Section Styles */
+.team-section .team-member {
+  transition: 0.5s;
+}
+
+.team-section .team-image {
+  position: relative;
+}
+
+.team-section img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #1eb2a6;
+  transition: 0.5s;
+}
+.team-overlay i {
+  background-color: #000;
+  color: #fff;
+  margin: 5px;
+  transition: 0.5s;
+ 
+}
+
+.team-section .team-details {
+  padding: 30px;
+  text-align: center;
+}
+
+.team-section .team-details h2 {
+  font-weight: 500;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.team-section .team-details p {
+  font-size: 15px;
+  color: rgb(30, 8, 51);
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+.team-section .team-member:hover {
+  background-color: #2a2aa6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.team-section .team-member:hover p {
+  color: #fff;
+}
+
+.team-section .team-member:hover .team-overlay {
+  opacity: 1;
+}
+
+.team-section .team-member:hover .team-overlay i:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+}

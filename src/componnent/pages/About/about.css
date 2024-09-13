@@ -1,0 +1,115 @@
+.aboutBenefitsSection {
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Align items in a row by default */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Flex container adjustments for large screens */
+.container {
+  display: grid;
+}
+
+/* Adjust image to be on the left */
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Align image to the left */
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
+/* Adjust content to be on the right */
+.contentContainer {
+  flex: 1;
+  padding: 80px 50px;
+}
+
+.benefitsItems {
+  margin-top: 50px;
+}
+
+.benefitItem {
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 20px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.benefitIcon {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.benefitIcon img {
+  width: 70px;
+  height: 70px;
+}
+
+.benefitDetails h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.benefitDetails p {
+  color: #999999;
+}
+
+.benefitItem:hover {
+  background-color: #0c3b93;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+}
+
+.benefitItem:hover p {
+  color: #fff;
+}
+
+/* Media Query for tablets */
+@media (max-width: 768px) {
+  .aboutBenefitsSection {
+    flex-direction: column; /* Stack items vertically on tablets */
+  }
+  .imageContainer {
+    order: 2; /* Move image below content */
+    padding: 20px 0; /* Adjust padding */
+  }
+  .contentContainer {
+    order: 1; /* Move content above image */
+    padding: 40px 20px;
+  }
+  .benefitItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .benefitIcon {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+  .contentContainer {
+    padding: 20px 10px;
+  }
+  .benefitDetails h2 {
+    font-size: 18px;
+  }
+  .benefitDetails p {
+    font-size: 14px;
+  }
+  .benefitIcon img {
+    width: 50px;
+    height: 50px;
+  }
+}
